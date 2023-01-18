@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100vw;
   height: 100vh;
   background-color: #eee;
@@ -85,6 +85,29 @@
     width: 60%;
   } 
 }
+
+@media screen and (max-width: 550px) {
+  .player-names_container {
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .player-name {
+    width: 60%;
+  }
+
+  .label-input {
+    justify-content: center;
+  }
+
+  .label-input:nth-child(2) {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .title-teams_container {
     width: 90%;

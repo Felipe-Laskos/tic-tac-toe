@@ -2,6 +2,7 @@
     position: relative;
     width: 30%;
     min-height: 50vh;
+    margin-top: 30px;
     transition: opacity 0.5s ease-out;
 }
 
