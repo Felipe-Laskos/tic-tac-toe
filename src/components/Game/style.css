@@ -1,0 +1,102 @@
+.game_container {
+    position: relative;
+    width: 30%;
+    min-height: 50vh;
+    transition: opacity 0.5s ease-out;
+}
+
+.game_container.not-playable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.game_line {
+    position: absolute;
+    background-color: #000;
+}
+
+.game-icon {
+    width: 70%;
+    height: 70%;
+}
+
+.blue {
+    color: #4169E1;
+}
+
+.red {
+    color: #DC143C;
+}
+
+.squares {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.square {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line-1 {
+    width: 3px;
+    height: 100%;
+    left: 33.3%;
+}
+
+.line-2 {
+    width: 3px;
+    height: 100%;
+    left: 66.6%;
+}
+
+.line-3 {
+    height: 3px;
+    width: 100%;
+    top: 33.3%;
+}
+
+.line-4 {
+    height: 3px;
+    width: 100%;
+    top: 66.6%;
+}
+
+
+ 
+@media screen and (max-width: 900px) {
+    .game_container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .game_container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .game_container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .game_container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-height: 1000px) {
+    .game_container {
+        width: 60%;
+    }
+}

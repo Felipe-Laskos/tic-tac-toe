@@ -1,0 +1,50 @@
+.teams_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    min-height: 70px;
+}
+
+.icon {
+    color: inherit;
+    font-size: 2.5em;
+    width: 50px;
+    transition: transform 0.25s ease-out;
+}
+
+.blue {
+    color: #4169E1;
+}
+
+.red {
+    color: #DC143C;
+}
+
+.icon-label-hover:hover, .icon-label-turn {
+    opacity: 1 !important;
+}
+
+.icon-label-hover:hover .icon, .icon-label-turn .icon {
+    transform: translateY(-10px);
+}
+
+.icon-label {
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: opacity 0.25s ease-out;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.label {
+    margin-top: 10px;
+    font-size: 15px;
+    max-width: 50px;
+    text-align: center;
+    word-wrap: break-word;
+}
