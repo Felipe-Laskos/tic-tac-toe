@@ -1,7 +1,18 @@
 import { FaRegCircle, FaTimes } from 'react-icons/fa';
 import "./style.css";
 
-const PlayersName = ({ playerTeam, playersName, handleInputPlayer1Change, handleInputPlayer2Change }) => {
+const PlayersName = ({ playerTeam, playersName, setPlayersName, setTitle }) => {
+    function handleInputPlayer1Change(playerName) {
+        setPlayersName([playerName, playersName[1]]);
+        if (playerTeam === undefined) {
+          setTitle(`Select ${playerName} Team!`);
+        }
+      }
+    
+      function handleInputPlayer2Change(playerName) {
+        setPlayersName([playersName[0], playerName])
+      }
+
     return (
         <div className="player-names_container">
             <div className='label-input'>

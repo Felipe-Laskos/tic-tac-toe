@@ -58,17 +58,6 @@ function App() {
     setSituation([[], []]);
   }
 
-  function handleInputPlayer1Change(playerName) {
-    setPlayersName([playerName, playersName[1]]);
-    if (playerTeam === undefined) {
-      setTitle(`Select ${playerName} Team!`);
-    }
-  }
-
-  function handleInputPlayer2Change(playerName) {
-    setPlayersName([playersName[0], playerName])
-  }
-
   React.useEffect(() => {
     let arrayX = situation[0];
     let arrayO = situation[1];
@@ -121,7 +110,7 @@ function App() {
       <div className="restart-icon_container" onClick={restartGame}>
         <FaUndoAlt className="restart-icon" title="Restart Game" />
       </div>
-      <PlayersName playerTeam={playerTeam} playersName={playersName} handleInputPlayer1Change={handleInputPlayer1Change} handleInputPlayer2Change={handleInputPlayer2Change} />
+      <PlayersName playerTeam={playerTeam} playersName={playersName} setPlayersName={setPlayersName} setTitle={setTitle} />
     </div>
   );
 }
